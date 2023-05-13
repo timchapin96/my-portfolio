@@ -1,0 +1,37 @@
+.about-me-card {
+  width: 100svw;
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: none;
+    color: #CCC9DC;
+    font-size: 7svw;
+    font-family: 'Markazi Text';
+  }
+  h4 {
+    color: #CCC9DC;
+    font-size: 3svw;
+    opacity: 0.6;
+  }
+  b {
+    color: #9F60BA;
+  }
+}
+.profile-img img {
+  width: 40svw;
+  padding-left: 5svw;
+}
+.profile {
+  padding-right: 5svw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.social-links {
+  display: flex;
+  padding: 5px;
+  img {
+    padding: 1.5svw;
+    width: 8svw;
+  }
+}
