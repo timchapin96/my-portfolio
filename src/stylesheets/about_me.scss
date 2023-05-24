@@ -1,16 +1,31 @@
+@keyframes fade-in {
+  0%{
+    margin-top: 10%;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 2rem;
+    opacity: 1;
+  }
+}
+
 .about-me-card {
+  overflow: hidden;
   width: 100svw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 2rem;
+  animation-name: fade-in;
+  animation-duration: 1s;
   p {
     margin: none;
     color: #CCC9DC;
-    font-size: 7svw;
+    font-size: 6svw;
     font-family: 'Markazi Text';
   }
   h4 {
     color: #CCC9DC;
-    font-size: 3svw;
+    font-size: 2svw;
     opacity: 0.6;
   }
   b {
@@ -18,20 +33,25 @@
   }
 }
 .profile-img img {
-  width: 40svw;
-  padding-left: 5svw;
+  width: 30svw;
 }
 .profile {
-  padding-right: 5svw;
+  width: 60svw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 .social-links {
   display: flex;
-  padding: 5px;
+  justify-content: center;
+  padding: 20px;
   img {
-    padding: 1.5svw;
-    width: 8svw;
+    padding: 1svw;
+    width: 4svw;
   }
+}
+.websites {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
 }

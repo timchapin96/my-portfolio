@@ -1,4 +1,5 @@
 import '../stylesheets/index.scss';
+import Websites from './Websites';
 
 function AboutMe() {
   return (
@@ -17,6 +18,9 @@ function AboutMe() {
           <img src="/assets/github.svg" alt="github link"></img>
           <img src="/assets/facebook.svg" alt="facebook link"></img>
           <img src="/assets/line.svg" alt="line link"></img>
+        </div>
+        <div className="websites">
+          <Websites />
         </div>
       </div>
     </div>
