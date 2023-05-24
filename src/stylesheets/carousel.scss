@@ -9,6 +9,10 @@
   width: inherit;
   height: 30svh;
   overflow: hidden;
+  --grid-main: 2;
+  --grid-left: 1;
+  --grid-right: 3;
+
   img {
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.3);
@@ -16,36 +20,34 @@
 
   .focused-img {
     width: 30svw;
-    grid-column: 2;
     grid-row: 1;
+    grid-column: 2;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-80%, -50%);
+    left: 25%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    transition: linear 0.2s;
   }
 
   .unfocused-img-left {
     width: 20svw;
-    grid-column: 1;
     grid-row: 1;
+    grid-column: 1;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0%, -50%);
     z-index: 0;
-    transition: linear 0.2s;
   }
+
   .unfocused-img-right {
     width: 20svw;
-    grid-column: 3;
     grid-row: 1;
+    grid-column: 3;
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 0%;
     transform: translate(0%, -50%);
     z-index: 0;
-    transition: linear 0.2s;
   }
 }

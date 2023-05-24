@@ -1,34 +1,118 @@
-import {useState} from 'react';
-import { useRef } from 'react';
+import anime from 'animejs/lib/anime.es.js';
 
 function MyWebsites() {
-  const [ScrollCount, setCount] = useState(0);
+  let timerId;
 
-  const handleScroll = (event) => {
-    const focusedImg = document.querySelector(".focused-img");
-    const leftImg = document.querySelector(".unfocused-img-left");
-    const rightImg = document.querySelector(".unfocused-img-right");
-
-    if (event.deltaY > 0) {
-      focusedImg.classList.replace("focused-img", "unfocused-img-left");
-      leftImg.classList.replace("unfocused-img-left", "unfocused-img-right");
-      rightImg.classList.replace("unfocused-img-right", "focused-img");
-      setCount(ScrollCount+1);
-
+  //Throttle function to stop overscrolling
+  var throttleFunction = function (func, delay) {
+    // If setTimeout is already scheduled, no need to do anything
+    if (timerId) {
+      return
     }
-    else if(event.deltaY < 0) {
-      focusedImg.classList.replace("focused-img", "unfocused-img-right");
-      rightImg.classList.replace("unfocused-img-right", "unfocused-img-left");
-      leftImg.classList.replace("unfocused-img-left", "focused-img");
-      setCount(ScrollCount+1);
-    }
+
+    // Schedule a setTimeout after delay seconds
+    timerId = setTimeout(function () {
+      func()
+
+      // Once setTimeout function execution is finished, timerId = undefined so that in <br>
+      // the next scroll event function execution can be scheduled by the setTimeout
+      timerId = undefined;
+    }, delay)
   }
+  //Handle Scrolling and animate with anime.js
+  const handleScroll = (event) => {
+    throttleFunction(() => {
+      const focusedImg = document.querySelector(".focused-img");
+      const leftImg = document.querySelector(".unfocused-img-left");
+      const rightImg = document.querySelector(".unfocused-img-right");
+
+      if (event.deltaY >= 0) {
+        rightImg.style.zIndex = 1;
+        focusedImg.style.zIndex = 0;
+        let tl = anime.timeline({
+          easing: 'easeOutExpo',
+          duration: 400
+        })
+        tl
+          .add({
+            targets: ".unfocused-img-left",
+            keyframes: [
+              { left: '-50%' },
+              { left: '100%', duration: 1 },
+              { left: '66.6%' }
+            ]
+          })
+          .add({
+            targets: [".unfocused-img-right"],
+            keyframes: [
+              { width: "30vw", left: "-125%" }
+            ]
+          }, 0)
+          .add({
+            targets: ".focused-img",
+            keyframes: [
+              { width: "20vw", left: "-25%"}
+            ]
+          }, 0)
+        setTimeout(() => {
+          focusedImg.classList.replace("focused-img", "unfocused-img-left");
+          leftImg.classList.replace("unfocused-img-left", "unfocused-img-right");
+          rightImg.classList.replace("unfocused-img-right", "focused-img");
+          leftImg.removeAttribute('style');
+          rightImg.removeAttribute('style');
+          focusedImg.removeAttribute('style');
+
+        }, "450");
+
+
+      }
+      else if (event.deltaY < 0) {
+        leftImg.style.zIndex = 1;
+        focusedImg.style.zIndex = 0;
+        let tl = anime.timeline({
+          easing: 'easeOutExpo',
+          duration: 400
+        })
+        tl
+          .add({
+            targets: ".unfocused-img-right",
+            keyframes: [
+              { left: '110%' },
+              { left: '-300%', duration: 1 },
+              { left: '-200%' }
+            ]
+          })
+          .add({
+            targets: [".unfocused-img-left"],
+            keyframes: [
+              { width: "30vw", left: "25%" }
+            ]
+          }, 0)
+          .add({
+            targets: ".focused-img",
+            keyframes: [
+              { width: "20vw", left: "75%" }
+            ]
+          }, 0)
+        setTimeout(() => {
+          focusedImg.classList.replace("focused-img", "unfocused-img-right");
+          rightImg.classList.replace("unfocused-img-right", "unfocused-img-left");
+          leftImg.classList.replace("unfocused-img-left", "focused-img");
+          leftImg.removeAttribute('style');
+          rightImg.removeAttribute('style');
+          focusedImg.removeAttribute('style');
+
+        }, "450");
+      }
+    }, 550);
+  }
+
   return (
     <div className="carousel">
       <h4>My Websites</h4>
-      <div className="my-websites" onWheel = {handleScroll}>
+      <div className="my-websites" onWheel={handleScroll}>
         <div className="teach-tokyo">
-          <img className="unfocused-img-left" src="/assets/teach_tokyo.png" alt="Teach Tokyo thumbnail"></img>
+          <a href="https://www.teachtokyo.com/" target="_blank" rel="noopener noreferrer"><img className="unfocused-img-left" src="/assets/teach_tokyo.png" alt="Teach Tokyo thumbnail" /></a>
         </div>
         <div className="tokyo-maps">
           <img className="focused-img" src="/assets/tokyo_maps.png" alt="Teach Tokyo thumbnail"></img>
