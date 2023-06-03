@@ -1,7 +1,7 @@
 .App {
   display: flex;
   position: relative;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
@@ -11,6 +11,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #0C1821;
+
 }
 h1 {
   margin: 0;

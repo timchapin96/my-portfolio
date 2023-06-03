@@ -1,3 +1,11 @@
+.carousel {
+  width: 100svw;
+  height: 50svh;
+  h4 {
+    color: rgb(203, 201, 219);
+    font-size: 2vw;
+  }
+}
 .my-websites {
   display: grid;
   grid-template-columns: repeat(3, 1fr) repeat(2, 0fr);
@@ -7,7 +15,7 @@
   position: relative;
   align-items: center;
   width: inherit;
-  height: 30svh;
+  height: 95%;
   overflow: hidden;
   --grid-main: 2;
   --grid-left: 1;
@@ -19,7 +27,7 @@
   }
 
   .focused-img {
-    width: 30svw;
+    width: 40svw;
     grid-row: 1;
     grid-column: 2;
     position: absolute;
@@ -30,18 +38,18 @@
   }
 
   .unfocused-img-left {
-    width: 20svw;
+    width: 30svw;
     grid-row: 1;
     grid-column: 1;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 3%;
     transform: translate(0%, -50%);
     z-index: 0;
   }
 
   .unfocused-img-right {
-    width: 20svw;
+    width: 30svw;
     grid-row: 1;
     grid-column: 3;
     position: absolute;

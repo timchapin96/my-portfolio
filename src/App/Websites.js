@@ -39,19 +39,19 @@ function MyWebsites() {
             keyframes: [
               { left: '-50%' },
               { left: '100%', duration: 1 },
-              { left: '66.6%' }
+              { left: '66.667%' }
             ]
           })
           .add({
             targets: [".unfocused-img-right"],
             keyframes: [
-              { width: "30vw", left: "-125%" }
+              { width: "40vw", left: "-110%" }
             ]
           }, 0)
           .add({
             targets: ".focused-img",
             keyframes: [
-              { width: "20vw", left: "-25%"}
+              { width: "30vw", left: "-23%"}
             ]
           }, 0)
         setTimeout(() => {
@@ -79,19 +79,19 @@ function MyWebsites() {
             keyframes: [
               { left: '110%' },
               { left: '-300%', duration: 1 },
-              { left: '-200%' }
+              { left: '-190.8%' }
             ]
           })
           .add({
             targets: [".unfocused-img-left"],
             keyframes: [
-              { width: "30vw", left: "25%" }
+              { width: "40vw", left: "30%" }
             ]
           }, 0)
           .add({
             targets: ".focused-img",
             keyframes: [
-              { width: "20vw", left: "75%" }
+              { width: "30vw", left: "72.5%" }
             ]
           }, 0)
         setTimeout(() => {
