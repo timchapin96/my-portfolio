@@ -23,12 +23,14 @@
     color: #CCC9DC;
     font-size: 5svw;
     font-family: 'Markazi Text';
+    text-shadow: 0 2px 2px #505050;
   }
 
   h4 {
     color: #CCC9DC;
     font-size: 2svw;
     opacity: 0.6;
+    text-shadow: 0 2px 2px #3c3c3c;
   }
 
   b {
@@ -42,12 +44,15 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
+  border: 0.5vw solid #CCC9DC;
+  box-shadow: 0 2px 3px #e4e1f5;
 }
 
 .profile {
   width: 80svw;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .profile-body {

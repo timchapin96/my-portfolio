@@ -1,11 +1,13 @@
 .carousel {
   width: 100svw;
   height: 50svh;
+
   h4 {
     color: rgb(203, 201, 219);
     font-size: 2vw;
   }
 }
+
 .my-websites {
   display: grid;
   grid-template-columns: repeat(3, 1fr) repeat(2, 0fr);
@@ -21,12 +23,18 @@
   --grid-left: 1;
   --grid-right: 3;
 
+  .website-card:hover {
+
+  }
+
+
   img {
-    border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.3);
   }
 
   .focused-img {
+    box-sizing: border-box;
+    border: 0.2vw solid #CCC9DC;
     width: 40svw;
     grid-row: 1;
     grid-column: 2;
@@ -38,6 +46,8 @@
   }
 
   .unfocused-img-left {
+    box-sizing: border-box;
+    border: 0.2vw solid #CCC9DC;
     width: 30svw;
     grid-row: 1;
     grid-column: 1;
@@ -49,6 +59,8 @@
   }
 
   .unfocused-img-right {
+    box-sizing: border-box;
+    border: 0.2vw solid #CCC9DC;
     width: 30svw;
     grid-row: 1;
     grid-column: 3;

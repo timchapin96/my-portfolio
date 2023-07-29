@@ -112,13 +112,13 @@ function MyWebsites() {
       <h4>My Websites</h4>
       <div className="my-websites" onWheel={handleScroll}>
         <div className="teach-tokyo">
-          <a href="https://www.teachtokyo.com/" target="_blank" rel="noopener noreferrer"><img className="unfocused-img-left" src="/assets/teach_tokyo.png" alt="Teach Tokyo thumbnail" /></a>
+          <a href="https://www.teachtokyo.com/" target="_blank" rel="noopener noreferrer"><img className="unfocused-img-left website-card" src="/assets/teach_tokyo.png" alt="Teach Tokyo thumbnail" /></a>
         </div>
         <div className="tokyo-maps">
-          <img className="focused-img" src="/assets/tokyo_maps.png" alt="Teach Tokyo thumbnail"></img>
+          <img className="focused-img website-card" src="/assets/tokyo_maps.png" alt="Teach Tokyo thumbnail"></img>
         </div>
         <div className="souji-center">
-          <img className="unfocused-img-right" src="/assets/souji_center.png" alt="Teach Tokyo thumbnail"></img>
+          <img className="unfocused-img-right website-card" src="/assets/souji_center.png" alt="Teach Tokyo thumbnail"></img>
         </div>
 
 
