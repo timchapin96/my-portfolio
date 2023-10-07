@@ -1,0 +1,17 @@
+.background {
+  width: 100svw;
+  height: 150svh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+#circle_rotate {
+  transform: rotate(10);
+}

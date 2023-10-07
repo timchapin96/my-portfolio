@@ -1,14 +1,17 @@
 import '../stylesheets/index.scss';
 import AboutMe from './AboutMe';
-import Navbar from './Navbar'
-import Websites from './Websites';
+import Background from './Background';
+import Navbar from './Navbar';
+import Projects from './Projects';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <AboutMe />
-      <Websites />
+      <Projects />
+      <Background />
+
+
     </div>
   );
 }

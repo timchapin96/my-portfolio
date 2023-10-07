@@ -3,8 +3,8 @@ function Navbar() {
     <navbar>
       <ul>
         <li>About</li>
-        <li>Skills</li>
         <li>Projects</li>
+        <li>Skills</li>
         <li>Contact</li>
       </ul>
     </navbar>

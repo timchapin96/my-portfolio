@@ -17,7 +17,7 @@
   position: relative;
   align-items: center;
   width: inherit;
-  height: 95%;
+  height: 80%;
   overflow: hidden;
   --grid-main: 2;
   --grid-left: 1;
@@ -30,12 +30,12 @@
 
   img {
     box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.3);
+    border-radius: 15px;
   }
 
   .focused-img {
     box-sizing: border-box;
-    border: 0.2vw solid #CCC9DC;
-    width: 40svw;
+    width: 35svw;
     grid-row: 1;
     grid-column: 2;
     position: absolute;
@@ -47,26 +47,24 @@
 
   .unfocused-img-left {
     box-sizing: border-box;
-    border: 0.2vw solid #CCC9DC;
-    width: 30svw;
+    width: 25svw;
     grid-row: 1;
     grid-column: 1;
     position: absolute;
     top: 50%;
-    left: 3%;
+    right: 60%;
     transform: translate(0%, -50%);
     z-index: 0;
   }
 
   .unfocused-img-right {
     box-sizing: border-box;
-    border: 0.2vw solid #CCC9DC;
-    width: 30svw;
+    width: 25svw;
     grid-row: 1;
     grid-column: 3;
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: -20%;
     transform: translate(0%, -50%);
     z-index: 0;
   }
