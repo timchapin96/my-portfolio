@@ -20,7 +20,7 @@
 
   .profile {
     width: inherit;
-    height: 100svh;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -38,21 +38,21 @@
   h1 {
     margin: none;
     color: white;
-    font-size: 8svw;
+    font-size: 4svh;
     font-weight: 400;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   h3 {
     color: white;
-    font-size: 3svw;
+    font-size: 2svh;
     opacity: 0.8;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Figtree', sans-serif;
   }
 
   p {
-    font-size: 3.5svw;
+    font-size: 2svh;
     color: white;
     font-weight: 600;
     font-family: 'Figtree', sans-serif;
@@ -169,7 +169,7 @@
   height: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .about-me-card {
     h1 {
       font-size: 45px;
