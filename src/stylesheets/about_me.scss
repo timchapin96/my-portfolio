@@ -10,67 +10,154 @@
 }
 
 .about-me-card {
+  width: 80svw;
+  padding-top: 10%;
   overflow: hidden;
-  width: 100svw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   animation-name: fade-in;
   animation-duration: 1s;
+  z-index: 1;
+
+  .profile {
+    width: inherit;
+    height: 100svh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-body {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  h1 {
+    margin: none;
+    color: white;
+    font-size: 8svw;
+    font-weight: 400;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  h3 {
+    color: white;
+    font-size: 3svw;
+    opacity: 0.8;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Figtree', sans-serif;
+  }
 
   p {
-    margin: none;
-    color: #CCC9DC;
-    font-size: 5svw;
-    font-family: 'Markazi Text';
-    text-shadow: 0 2px 2px #505050;
+    font-size: 3.5svw;
+    color: white;
+    font-weight: 600;
+    font-family: 'Figtree', sans-serif;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 150%;
   }
 
-  h4 {
-    color: #CCC9DC;
-    font-size: 2svw;
-    opacity: 0.6;
-    text-shadow: 0 2px 2px #3c3c3c;
-  }
-
-  b {
-    color: #9F60BA;
+  .resume button {
+    font-size: 3vw;
+    background-color: rgb(118, 28, 220);
+    color: white;
+    border: none;
+    width: 40vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
-.profile-img img {
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  border: 0.5vw solid #CCC9DC;
-  box-shadow: 0 2px 3px #e4e1f5;
-}
-
-.profile {
-  width: 80svw;
+.img-header {
+  width: 50vw;
+  height: 50vw;
+  max-width: 250px;
+  max-height: 250px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  padding-bottom: 2vw;
+
+  .profile-img {
+    width: 80%;
+    height: 80%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .social-links {
+    width: 70%;
+    height: 20%;
+    padding-bottom: 10svw;
+    padding-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+
+    #linkedin {
+      position: absolute;
+      left: -10%;
+      top: -25%;
+    }
+
+    #line {
+      position: absolute;
+      right: -10%;
+      top: -25%;
+    }
+
+    img {
+      width: 7svw;
+      max-width: 35px;
+      filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
 }
+
+
 
 .profile-body {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-
-  img {
-    padding: 1svw;
-    width: 4svw;
+.summary {
+  p {
+    text-align: center;
+    padding: 10% 20% 10% 20%;
+    line-height: 180%;
   }
 }
+
+.projects-button {
+  padding-top: 3vh;
+
+  p {
+    padding-bottom: 5px;
+  }
+
+  svg {
+    color: white;
+  }
+}
+
+
 
 .websites {
   margin: 10px;
@@ -78,12 +165,55 @@
   height: 100%;
 }
 
-@media screen and (max-width: 700px) {
-  .profile-img img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
+@media screen and (min-width: 700px) {
+  .about-me-card {
+    padding-top: 5%;
+    h1 {
+      font-size: 45px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .resume {
+      button:hover {
+        cursor: pointer;
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .projects-button {
+    padding-top: 15px;
+
+    p {
+      padding: none;
+    }
+  }
+
+  .social-links {
+    padding-bottom: 50px;
+
+    #linkedin {
+      top: -15% !important;
+    }
+
+    #line {
+      top: -15% !important;
+    }
+  }
+
+  .summary {
+    p {
+      padding: 2.5% 20% 2.5% 20%;
+    }
   }
 }

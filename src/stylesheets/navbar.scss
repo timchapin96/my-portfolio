@@ -1,20 +1,31 @@
 navbar {
   width: 100svw;
-  background-color: rgb(203, 201, 219);
+  height: 5svh;
+  max-height: 50px;
+  background-color: black;
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 2px 4px rgb(152, 151, 160);
+  box-shadow: 0 2px 4px rgb(42, 42, 42);
   ul{
+    height: inherit;
+    max-height: inherit;
     display: flex;
-    justify-content: flex-end;
-  }
-  ul:last-child {
-    padding-right: 15px;
+    justify-content: center;
+    align-items: center;
   }
   li {
-    font-size: 20px;
+    color: white;
+    font-size: 3.5vw;
     padding: 0 10px;
     list-style: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  navbar {
+    li {
+      font-size: 15px;
+    }
   }
 }
