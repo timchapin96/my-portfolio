@@ -19,10 +19,10 @@ function AboutMe() {
             <img src="/assets/profile.jpeg" alt="Timothy Chapin" />
           </div>
           <div className="social-links">
-            <img id="linkedin" src="/assets/linkedin.svg" alt="linkedin link"></img>
-            <img id="github" src="/assets/github.svg" alt="github link"></img>
-            <img id="facebook" src="/assets/facebook.svg" alt="facebook link"></img>
-            <img id="line" src="/assets/line.svg" alt="line link"></img>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/timothy-chapin/"><img id="linkedin" src="/assets/linkedin.svg" alt="linkedin link"></img></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/timchapin96"><img id="github" src="/assets/github.svg" alt="github link"></img></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/timothy.chapin.12/"><img id="facebook" src="/assets/facebook.svg" alt="facebook link"></img></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/timchap96/"><img id="instagram" src="/assets/instagram-logo.svg" alt="instagram link"></img></a>
           </div>
         </div>
 

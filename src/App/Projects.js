@@ -4,8 +4,8 @@ function Projects( {projectRefs} ) {
       <div className="project">
         <div className="project-header">
           <div className="project-img">
-            <a href="https://www.teachtokyo.com/" alt="teach tokyo website">
-              <img src="/assets/TeachTokyo.png"></img>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.teachtokyo.com/" alt="teach tokyo website">
+              <img src="/assets/TeachTokyo.png" alt="thumbnail"></img>
             </a>
           </div>
           <div className="project-title">
@@ -29,8 +29,8 @@ function Projects( {projectRefs} ) {
       <div className="project">
         <div className="project-header">
           <div className="project-img">
-            <a href="https://www.teachtokyo.com/" alt="teach tokyo website">
-              <img src="/assets/TokyoMaps.png"></img>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.tokyomaps.net/" alt="teach tokyo website">
+              <img src="/assets/TokyoMaps.png" alt="thumbnail"></img>
             </a>
           </div>
           <div className="project-title">
