@@ -10,7 +10,7 @@
 
 .about-me-card {
   width: 80%;
-  padding: 2.5%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -33,6 +33,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
   }
 
   h1 {
@@ -60,17 +61,30 @@
     line-height: 150%;
   }
 
-  .resume button {
-    font-size: 85%;
-    background-color: rgb(118, 28, 220);
-    color: white;
-    border: none;
-    width: 40%;
-    height: 20%;
-    max-width: 300px;
-    max-height: 50px;
-    border-radius: 50px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  .resume {
+    width: 20vh;
+    height: 7vh;
+
+    button {
+      border: solid 1px white;
+      width: 20vh;
+      height: 7vh;
+      font-size: 85%;
+      background-color: rgb(118, 28, 220);
+      color: white;
+      border-radius: 50px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      .resume-text {
+        display: block;
+        transition: 0.3s;
+      }
+
+      .download-svg {
+        display: block;
+        font-size: 2vh;
+      }
+    }
   }
 }
 
@@ -79,11 +93,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3vh;
 
   .profile-img {
     width: 80%;
-    height: 80%;
     padding-bottom: 1vh;
 
     img {
@@ -102,18 +114,21 @@
     display: flex;
     justify-content: space-evenly;
 
-    #linkedin, #instagram {
+    #linkedin,
+    #instagram {
       position: absolute;
       top: -70%;
       width: 15%;
     }
+
     #linkedin {
       left: 6.5%;
       border-radius: 50%;
       border: solid 1px white;
     }
+
     #instagram {
-      right:6.5%;
+      right: 6.5%;
     }
 
     a {
@@ -178,17 +193,36 @@
     }
 
     .resume {
-      button:hover {
-        cursor: pointer;
-      }
+      width: 15vw;
+      height: 5vw;
 
       button {
-        width: 20vw;
+        width: 15vw;
         height: 5vw;
+        transition: ease-in-out 0.3s;
+        .download-svg {
+          display: none;
+        }
       }
+    }
+
+    .resume:hover {
 
       button {
-        font-size: 1.5vw;
+        text-align: center;
+        width: 8vw;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+
+        .resume-text {
+          display: none;
+        }
+
+        .download-svg {
+          display: block;
+          font-size: 2vw;
+        }
       }
     }
   }
@@ -202,8 +236,12 @@
   }
 
   .img-header {
-    width: 20%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
+
+    .profile-img {
+      padding-bottom: 1vw;
+    }
 
     .social-links {
       img {

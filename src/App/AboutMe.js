@@ -1,7 +1,7 @@
 import '../stylesheets/index.scss';
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import MyResume from "../assets/TimothyChapinResume.pdf"
-import { useRef } from 'react';
+import { AiOutlineDownload } from "react-icons/ai";
 
 
 
@@ -41,7 +41,10 @@ function AboutMe() {
           <div className="profile-footer">
             <div className="resume">
               <a href= { MyResume } download="TimChapinResume" alt="Tim's Resume" target= "_blank" rel="noreferrer">
-                <button>Resume</button>
+                <button>
+                  <p className="resume-text">Resume</p>
+                  <div className="download-svg"><AiOutlineDownload/></div>
+                </button>
               </a>
             </div>
             <div className="projects-button">
