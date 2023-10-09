@@ -197,6 +197,7 @@
       height: 5vw;
 
       button {
+        border-radius: 250px;
         width: 15vw;
         height: 5vw;
         transition: ease-in-out 0.3s;
@@ -211,7 +212,7 @@
       button {
         text-align: center;
         width: 8vw;
-        border-radius: 250px;
+        border-radius: 50px;
         cursor: pointer;
         transition: ease-in-out 0.3s;
 
