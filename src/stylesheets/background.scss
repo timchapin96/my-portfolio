@@ -1,6 +1,7 @@
 .background {
   svg {
     position: fixed;
+    resize: horizontal;
     left: -10%;
     top: 0;
     z-index: -1;
