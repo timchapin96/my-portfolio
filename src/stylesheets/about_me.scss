@@ -194,11 +194,6 @@
 
 @media screen and (min-width: 600px) and (orientation: landscape) {
   .about-me-card {
-    padding: 0;
-    .profile {
-      height: 100vh;
-    }
-
     h1 {
       font-size: var(--font-size-900);
     }
