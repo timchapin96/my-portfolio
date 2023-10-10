@@ -4,8 +4,8 @@
 function Background() {
   return (
     <div className="background">
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'>
-        <rect fill='#6505EE' width='2000' height='1500' />
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox=''>
+        <rect fill='#6505EE' />
         <defs>
           <radialGradient id='a' gradientUnits='objectBoundingBox'>
             <stop offset='0' stopColor='#FB3' />
