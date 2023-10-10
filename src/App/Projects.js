@@ -13,7 +13,7 @@ function Projects( {projectRefs} ) {
           </div>
         </div>
         <div className="project-body">
-          <p>Teach Tokyo is a quiz based strategy game to be used in the classroom as a warmup activity before lessons. It uses an interactive SVG map of Tokyo which students can conquer for their teams. Users can create as many games as they want as well.</p>
+          <p>Teach Tokyo is a quiz based strategy game to be used in the classroom as a warmup activity before lessons. It uses an interactive SVG map of Japan which students can conquer for their teams.</p>
         </div>
         <div className="tech-stack">
           <ul>
@@ -38,7 +38,7 @@ function Projects( {projectRefs} ) {
           </div>
         </div>
         <div className="project-body">
-          <p>Tokyo Maps is a MapBox based application made to assist expats looking to relocate to Tokyo. My team gathered rental, safety, international schools, and pet friendliness data for each ward, normalized it, and display that information to the user through a filter system on an interactive map of Toyko. </p>
+          <p>Tokyo Maps is a MapBox based application made to assist expats looking to relocate to Tokyo. My team gathered rental, safety, international school, and pet friendliness data for each ward, normalized it, and displayed that information to the user through a filter system on an interactive map of Tokyo. </p>
         </div>
         <div className="tech-stack">
           <ul>
