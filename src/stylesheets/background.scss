@@ -1,12 +1,11 @@
 .background {
-  height: 100lvh;
   svg {
     position: fixed;
     left: -10%;
     top: 0;
     z-index: -1;
     width: 200%;
-    height: 100lvh;
+    height: 105vh;
     will-change: transform;
   }
 }

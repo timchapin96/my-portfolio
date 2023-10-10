@@ -11,6 +11,7 @@
 .about-me-card {
   width: 80%;
   height: 100%;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -162,7 +163,7 @@
 }
 
 .projects-button {
-  padding-top: 3vh;
+  padding-top: 1.5vh;
 
   p {
     padding-bottom: 5px;
@@ -191,7 +192,48 @@
   height: 100%;
 }
 
-@media screen and (min-width: 600px) and (orientation: landscape) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .about-me-card {
+    .img-header {
+      width: 30%;
+    }
+
+    p {
+      padding: 2.5% 10% 2.5% 10%;
+    }
+
+    h1 {
+      font-size: var(--font-size-300);
+    }
+
+    h3,
+    p {
+      font-size: 1rem;
+    }
+
+    .resume {
+      width: 17vw;
+      height: 5vw;
+
+      a button {
+        width: 17vw;
+        height: 5vw;
+
+        .resume-text {
+          padding: 0;
+        }
+
+        .resume-text,
+        .download-svg {
+          font-size: 1rem;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
   .about-me-card {
     h1 {
       font-size: var(--font-size-900);
@@ -205,13 +247,6 @@
       font-size: var(--font-size-400);
     }
 
-    // //Not following rules of specificity for some reason. Ask later.
-    // .resume,
-    // .resume a button {
-    //   min-width: 100px;
-    //   min-height: 20px;
-    // }
-
     .resume {
       width: 15vw;
       height: 5vw;
@@ -221,6 +256,15 @@
         width: 15vw;
         height: 5vw;
         transition: ease-in-out 0.3s;
+
+        .resume-text {
+          padding: 0;
+        }
+
+        .resume-text,
+        .download-svg {
+          font-size: var(--font-size-100)
+        }
 
         .download-svg {
           display: none;
