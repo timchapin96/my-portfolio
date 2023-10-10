@@ -10,7 +10,8 @@
 
 .about-me-card {
   width: 80%;
-  height: 100vh;
+  height: 100%;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -28,32 +29,35 @@
     flex-direction: column;
   }
 
-  .main-body {
-    padding-top: 15px;
+  .profile-main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+  }
+
+  .profile-info {
+    padding-top: 2rem;
   }
 
   h1 {
     margin: none;
     color: white;
-    font-size: 100%;
+    font-size: var(--font-size-800);
     font-weight: 400;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   h3 {
     color: white;
-    font-size: 75%;
+    font-size: var(--font-size-100);
     opacity: 0.8;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Figtree', sans-serif;
   }
 
   p {
-    font-size: 75%;
+    font-size: var(--font-size-100);
     color: white;
     font-weight: 600;
     font-family: 'Figtree', sans-serif;
@@ -61,15 +65,14 @@
     line-height: 150%;
   }
 
-  .resume {
+  .resume,
+  .resume a button {
     width: 20vh;
-    height: 7vh;
+    height: 8vh;
 
     button {
       border: solid 1px white;
-      width: 20vh;
-      height: 7vh;
-      font-size: 85%;
+      font-size: var(--font-size-500);
       background-color: rgb(118, 28, 220);
       color: white;
       border-radius: 50px;
@@ -78,11 +81,12 @@
       .resume-text {
         display: block;
         transition: 0.3s;
+        font-size: var(--font-size-100);
       }
 
       .download-svg {
         display: block;
-        font-size: 2vh;
+        font-size: var(--font-size-100);
       }
     }
   }
@@ -168,6 +172,16 @@
   svg {
     color: white;
   }
+
+  .down-arrow:hover {
+    cursor: pointer;
+  }
+
+  .down-arrow {
+    svg {
+      font-size: var(--font-size-100);
+    }
+  }
 }
 
 
@@ -180,27 +194,40 @@
 
 @media screen and (min-width: 600px) and (orientation: landscape) {
   .about-me-card {
+    padding: 0;
+    .profile {
+      height: 100vh;
+    }
+
     h1 {
-      font-size: 3vw;
+      font-size: var(--font-size-900);
     }
 
     h3 {
-      font-size: 1.5vw;
+      font-size: var(--font-size-400);
     }
 
     p {
-      font-size: 1.5vw;
+      font-size: var(--font-size-400);
     }
+
+    // //Not following rules of specificity for some reason. Ask later.
+    // .resume,
+    // .resume a button {
+    //   min-width: 100px;
+    //   min-height: 20px;
+    // }
 
     .resume {
       width: 15vw;
       height: 5vw;
 
       button {
-        border-radius: 250px;
+        border-radius: 4rem;
         width: 15vw;
         height: 5vw;
         transition: ease-in-out 0.3s;
+
         .download-svg {
           display: none;
         }
@@ -212,7 +239,7 @@
       button {
         text-align: center;
         width: 8vw;
-        border-radius: 50px;
+        border-radius: 1rem;
         cursor: pointer;
         transition: ease-in-out 0.3s;
 
@@ -222,23 +249,26 @@
 
         .download-svg {
           display: block;
-          font-size: 2vw;
+          font-size: var(--font-size-600);
         }
       }
     }
   }
 
   .projects-button {
-    padding-top: 15px;
+    padding-top: 1.5rem;
 
     p {
       padding: none;
+    }
+
+    .down-arrow svg {
+      font-size: var(--font-size-400);
     }
   }
 
   .img-header {
     width: 25%;
-    height: 25%;
 
     .profile-img {
       padding-bottom: 1vw;
@@ -248,20 +278,12 @@
       img {
         width: 2.5vw;
       }
-
-      // #linkedin {
-      //   top: -10% !important;
-      // }
-
-      // #instagram {
-      //   top: -10% !important;
-      // }
     }
   }
 
   .summary {
     p {
-      padding: 2.5% 20% 2.5% 20%;
+      padding: 5.5% 20% 2.5% 20%;
     }
   }
 }
