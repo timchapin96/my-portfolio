@@ -1,12 +1,9 @@
 .background {
-  position: fixed;
-  width: 200%;
-  height: 100vh;
-  left: -60%;
-  z-index: -1;
-  transition: 0.1s ease-in-out;
-
   svg {
+    position: fixed;
+    left: -10%;
+    top: 0;
+    z-index: -1;
     width: 200%;
     height: 100vh;
   }
