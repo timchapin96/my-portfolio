@@ -36,7 +36,7 @@ function Background() {
           </g>
         </defs>
         <g transform=''>
-          <g id="circle_rotate">
+          <g className="circle-rotate">
             <circle fill='url(#a)' r='3000' />
             <g opacity='0.5'>
               <circle fill='url(#a)' r='2000' />

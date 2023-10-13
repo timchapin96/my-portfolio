@@ -2,13 +2,36 @@ import '../stylesheets/index.scss';
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import MyResume from "../assets/TimothyChapinResume.pdf"
 import { AiOutlineDownload } from "react-icons/ai";
+import anime from 'animejs/lib/anime.es.js';
 
 
 
 function AboutMe() {
   const projectsDiv = document.getElementsByClassName("projects-container")
+  const backgroundSpin = document.getElementsByClassName("circle-rotate");
+
+  let degree = 0;
+  let spin = false;
+
   const handleClick = () => {
     projectsDiv[0].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const spinAnimation = anime({
+    targets: '.circle-rotate',
+    rotate: '-180deg',
+    easing: 'linear',
+    loop: true
+  });
+  const backgroundSpinClick = () => {
+    console.log(spin);
+    spin = !spin;
+    if (spin) {
+      spinAnimation.play();
+    }
+    else {
+      spinAnimation.pause();
+    }
   }
 
   return (
@@ -17,7 +40,7 @@ function AboutMe() {
         <div className="profile-main">
           <div className="img-header">
             <div className="profile-img">
-              <img src="/assets/profile.jpeg" alt="Timothy Chapin" />
+              <img onClick={backgroundSpinClick} src="/assets/profile.jpeg" alt="Timothy Chapin" />
             </div>
             <div className="social-links">
               <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/timothy-chapin/"><img id="linkedin" src="/assets/linkedin.svg" alt="linkedin link"></img></a>
