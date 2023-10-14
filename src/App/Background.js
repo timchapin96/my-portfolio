@@ -37,7 +37,7 @@ function Background() {
         </defs>
         <g transform=''>
           <g className="circle-rotate">
-            <circle fill='url(#a)' r='3000' />
+            <circle fill='url(#a)' r='5000' />
             <g opacity='0.5'>
               <circle fill='url(#a)' r='2000' />
               <circle fill='url(#a)' r='1800' />
@@ -57,7 +57,7 @@ function Background() {
               <use href='#g' transform='rotate(120)' />
               <use href='#g' transform='rotate(240)' />
             </g>
-            <circle fillOpacity='0.1' fill='url(#a)' r='3000' />
+            <circle fillOpacity='0.1' fill='url(#a)' r='5000' />
           </g>
         </g>
       </svg>

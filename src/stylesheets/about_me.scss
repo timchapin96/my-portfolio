@@ -9,9 +9,7 @@
 }
 
 .about-me-card {
-  width: 80%;
-  height: 100%;
-  padding: 2rem;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -24,7 +22,7 @@
     height: 100%;
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
   }
@@ -93,21 +91,31 @@
 }
 
 .img-header {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .profile-img {
     width: 80%;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
 
     img {
       width: 100%;
       border-radius: 50%;
       object-fit: cover;
       object-position: top;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border: solid 3px white;
+      animation: 1s glow infinite alternate
+    }
+    img:hover {
+      cursor: pointer;
+      animation: none;
+      box-shadow: 0 9px plum;
+    }
+    img:active {
+      box-shadow: 0 5px rgb(118, 29, 118);
+      transform: translateY(3px);
     }
   }
 
@@ -146,18 +154,18 @@
   }
 }
 
-
-
 .profile-body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: center;
 }
 
 .summary {
-  p {
+  width: 70%;
+  padding: 4rem 0;
+  #profile-summary {
     text-align: center;
-    padding: 10% 20% 10% 20%;
     line-height: 180%;
   }
 }
@@ -184,8 +192,6 @@
   }
 }
 
-
-
 .websites {
   margin: 10px;
   width: 100%;
@@ -194,12 +200,9 @@
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .about-me-card {
+    padding: 0 2rem;
     .img-header {
-      width: 30%;
-    }
-
-    p {
-      padding: 2.5% 10% 2.5% 10%;
+      width: 25%;
     }
 
     h1 {
@@ -293,6 +296,11 @@
     }
   }
 
+  .summary {
+    width: 40%;
+    padding: 2rem 0;
+  }
+
   .projects-button {
     padding-top: 1.5rem;
 
@@ -306,7 +314,7 @@
   }
 
   .img-header {
-    width: 25%;
+    width: 20%;
 
     .profile-img {
       padding-bottom: 1vw;
@@ -319,9 +327,16 @@
     }
   }
 
-  .summary {
-    p {
-      padding: 5.5% 20% 2.5% 20%;
-    }
+}
+
+@keyframes glow {
+  from{
+      box-shadow: 0 0 0px whitesmoke;
+  }
+  to {
+      box-shadow: 0 0 5px whitesmoke;
+  }
+  to {
+      box-shadow: 0 0 15px whitesmoke;
   }
 }
