@@ -1,15 +1,35 @@
 import '../stylesheets/index.scss';
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
-import MyResume from "../assets/TimothyChapinResume.pdf"
 import { AiOutlineDownload } from "react-icons/ai";
-
-
+import MyResume from "../assets/TimothyChapinResume.pdf"
+import anime from 'animejs/lib/anime.es.js';
+import React, { useState, useEffect, useRef } from 'react';
 
 function AboutMe() {
   const projectsDiv = document.getElementsByClassName("projects-container")
+  const [playing, setPlaying] = useState(false);
+  const spinAnimation = useRef(null);
+
   const handleClick = () => {
     projectsDiv[0].scrollIntoView({ behavior: 'smooth' });
   }
+
+  const handleSpinClick = () => {
+    playing ? spinAnimation.current.pause() : spinAnimation.current.play();
+    setPlaying(!playing);
+  }
+
+  useEffect(() => {
+    spinAnimation.current = anime({
+      targets: '.circle-rotate',
+      rotate: '-361deg',
+      easing: 'linear',
+      autoplay: false,
+      duration: 40000,
+      loop: true
+    });
+  }, []);
+
 
   return (
     <div className="about-me-card">
@@ -17,7 +37,7 @@ function AboutMe() {
         <div className="profile-main">
           <div className="img-header">
             <div className="profile-img">
-              <img src="/assets/profile.jpeg" alt="Timothy Chapin" />
+              <img onClick={handleSpinClick} src="/assets/profile.jpeg" alt="Timothy Chapin" />
             </div>
             <div className="social-links">
               <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/timothy-chapin/"><img id="linkedin" src="/assets/linkedin.svg" alt="linkedin link"></img></a>
@@ -32,7 +52,7 @@ function AboutMe() {
               <h3>Full Stack Developer</h3>
             </div>
             <div className="summary">
-              <p>
+              <p id="profile-summary">
                 Full Stack Web Developer located in Tokyo. I am currently an English Teacher in the central Tokyo area using my coding to make fun, interactive games for my students!
               </p>
             </div>
