@@ -4,7 +4,7 @@ function Projects() {
   return (
     <div id="projects-container">
       <div className="project-card">
-        <img src="/assets/teach_tokyo.png"></img>
+        <img alt="Teach Tokyo" src="/assets/teach_tokyo.png"></img>
         <div className="project-content">
           <title>TeachTokyo</title>
           <div className="description">A fun, interactive map game to help teach your students!</div>
@@ -14,7 +14,7 @@ function Projects() {
         </div>
       </div>
       <div className="project-card">
-        <img src="assets/tokyo_maps.png"></img>
+        <img alt="Tokyo Maps" src="assets/tokyo_maps.png"></img>
         <div className="project-content">
           <title></title>
           <div className="description">An informative website to help expats discover Tokyo.</div>
