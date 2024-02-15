@@ -6,9 +6,9 @@ import Projects from './Projects';
 function App() {
   return (
     <div className="App">
+      <Background />
       <AboutMe />
       <Projects />
-      <Background />
 
 
     </div>
