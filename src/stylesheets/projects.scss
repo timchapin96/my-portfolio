@@ -7,6 +7,26 @@
   padding: 10rem 3rem;
 }
 
+#teach-tokyo {
+  opacity: 0.5;
+}
+
+.construction {
+  display: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 60%;
+}
+
+.maintenance {
+  position: absolute;
+  opacity: 1 !important;
+  h1 {
+    opacity: inherit;
+  }
+}
+
 .project {
   display: flex;
   flex-direction: column;
@@ -31,7 +51,6 @@
     .project-img a img {
       width: 60vw;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
     }
   }
 
